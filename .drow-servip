@@ -1,0 +1,1 @@
+setterm -bold on;cl;bash .b;setterm -foreground green;figlet -f slant -c Sockets ON;echo;setterm -foreground cyan;netstat -t;echo;bash .bani-c;bash .drow

@@ -1,0 +1,1 @@
+setterm -bold on;cl;bash .b;echo;setterm -foreground green;figlet -f slant -c Info IP;echo;setterm -foreground cyan;ifconfig;echo;bash .bani-c;bash .drow

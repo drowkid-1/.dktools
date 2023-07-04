@@ -1,0 +1,1 @@
+cd;cd .dktools;setterm -bold on;cl;bash .b;echo;setterm -foreground green;echo;python3 .scannport;echo;bash .bani-c;bash .drow

@@ -1,0 +1,2 @@
+chmod 775 drow-banner  drow-ip    drow-linuxrdp  drow-serv       drow-ubuntu drow         drow-info  drow-linux     drow-scannport  drow-servip  drow-ubunturdp;mv drow         drow-info  drow-linux     drow-scannport  drow-servip  drow-ubunturdp drow-banner  drow-ip    drow-linuxrdp  drow-serv       drow-ubuntu ~/../usr/bin
+

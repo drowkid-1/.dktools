@@ -1,0 +1,1 @@
+cl;bash .b;echo;bash .bservweb;echo;setterm -foreground green;echo "CTRL+C PARA DETENER LOCALHOST";echo;echo;setterm -foreground red;python3 -m http.server 8000;bash .bani-c;bash .drow;

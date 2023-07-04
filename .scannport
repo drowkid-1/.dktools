@@ -1,0 +1,50 @@
+import sys
+import socket
+from datetime import datetime
+
+
+def port_scanner():
+    print('### Escaneando Puertos ###')
+
+    # defining a target
+    target = 'localhost'
+
+    print("-" * 50)
+    print("Escaner iniciado :" + str(datetime.now()))
+    print("-" * 50)
+
+    try:
+        # will scan ports between 1 to 65,535
+        for port in range(1, 65535):
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            socket.setdefaulttimeout(1)
+            # returns an indicator
+            result = s.connect_ex((target, port))
+            if result == 0:
+                print("Puerto {} abierto".format(port))
+            # else:
+            # print("Puerto {} cerrado".format(port))
+            s.close()
+
+    except KeyboardInterrupt:
+        print("\n Baiii !!!")
+        sys.exit()
+    except socket.gaierror:
+        print("\n Error con tu conexión !!!")
+        sys.exit()
+    except socket.error:
+        print("\n Servidor inestable, imposible iniciarlo. !!!")
+        sys.exit()
+
+    """
+    Note:
+    In the above code at line 22 i.e for the port in range(1, 65535):
+    you can custom define your ports under which range you have to scan.
+    This port scanner will generally take the time
+    of 2 mins maximum to produce output in the format,
+    that so and so ports are open or closed.
+    """
+
+
+if __name__ == "__main__":
+    port_scanner()

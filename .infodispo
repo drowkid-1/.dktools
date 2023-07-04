@@ -1,0 +1,20 @@
+import platform
+
+print("Running OS Flavour: ", platform.system())
+print("OS Version: ", platform.version())
+print("OS Release: ", platform.release())
+print("Kernel Version: ", platform.platform())
+print("Machine Type: ", platform.machine())
+print("Architecture: ", platform.architecture())
+
+import os
+try:
+    from getmac import get_mac_address as gma
+except ModuleNotFoundError:
+    # install required packages in the virtual environment
+    os.system('pip install getmac')
+    from getmac import get_mac_address as gma
+
+
+print("\nThe MAC address:", gma())
+
